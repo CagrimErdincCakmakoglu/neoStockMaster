@@ -171,4 +171,16 @@
   <data name="Onayla" xml:space="preserve">
     <value>Onayla</value>
   </data>
+  <data name="E-Mail Adresinizi Yazınız" xml:space="preserve">
+    <value>E-Mail Adresinizi Yazınız</value>
+  </data>
+  <data name="İşlemi Seç" xml:space="preserve">
+    <value>İşlemi Seç</value>
+  </data>
+  <data name="Kullanıcı İsmini Hatırlat" xml:space="preserve">
+    <value>Kullanıcı İsmini Hatırlat</value>
+  </data>
+  <data name="Şifremi Hatırlat" xml:space="preserve">
+    <value>Şifremi Hatırlat</value>
+  </data>
 </root>

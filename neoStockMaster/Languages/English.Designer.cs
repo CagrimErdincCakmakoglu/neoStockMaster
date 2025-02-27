@@ -79,6 +79,15 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter Your Email Address.
+        /// </summary>
+        internal static string E_Mail_Adresinizi_Yazınız {
+            get {
+                return ResourceManager.GetString("E-Mail Adresinizi Yazınız", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log In Screen.
         /// </summary>
         internal static string Giriş_Ekranı {
@@ -111,6 +120,15 @@ namespace neoStockMaster.Languages {
         internal static string İsim {
             get {
                 return ResourceManager.GetString("İsim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose the Action.
+        /// </summary>
+        internal static string İşlemi_Seç {
+            get {
+                return ResourceManager.GetString("İşlemi Seç", resourceCulture);
             }
         }
         
@@ -156,6 +174,15 @@ namespace neoStockMaster.Languages {
         internal static string Kullanıcı_İsmi {
             get {
                 return ResourceManager.GetString("Kullanıcı İsmi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remember Username.
+        /// </summary>
+        internal static string Kullanıcı_İsmini_Hatırlat {
+            get {
+                return ResourceManager.GetString("Kullanıcı İsmini Hatırlat", resourceCulture);
             }
         }
         
@@ -210,6 +237,15 @@ namespace neoStockMaster.Languages {
         internal static string Şifre_Hatırla {
             get {
                 return ResourceManager.GetString("Şifre Hatırla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remember Password.
+        /// </summary>
+        internal static string Şifremi_Hatırlat {
+            get {
+                return ResourceManager.GetString("Şifremi Hatırlat", resourceCulture);
             }
         }
         

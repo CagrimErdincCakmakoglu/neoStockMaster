@@ -123,6 +123,9 @@
   <data name="Dil" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="E-Mail Adresinizi Yazınız" xml:space="preserve">
+    <value>Enter Your Email Address</value>
+  </data>
   <data name="Giriş Ekranı" xml:space="preserve">
     <value>Log In Screen</value>
   </data>
@@ -150,6 +153,9 @@
   <data name="Kullanıcı İsmi" xml:space="preserve">
     <value>Username</value>
   </data>
+  <data name="Kullanıcı İsmini Hatırlat" xml:space="preserve">
+    <value>Remember Username</value>
+  </data>
   <data name="Kullanıcı Şifresi" xml:space="preserve">
     <value>User Password</value>
   </data>
@@ -165,10 +171,16 @@
   <data name="İsim" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="İşlemi Seç" xml:space="preserve">
+    <value>Choose the Action</value>
+  </data>
   <data name="Şifre" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="Şifre Hatırla" xml:space="preserve">
     <value>Password Remember</value>
+  </data>
+  <data name="Şifremi Hatırlat" xml:space="preserve">
+    <value>Remember Password</value>
   </data>
 </root>

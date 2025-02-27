@@ -158,11 +158,8 @@ namespace neoStockMaster.Data.Services
             return users?.FirstOrDefault(user => user.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
         }
 
-        public User FindUserByName(string name)
-        {
-            users = GetAllUsers();
-            return users?.FirstOrDefault(user => user.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
-        }
+
+
 
         public User GetCurrentUser()
         {

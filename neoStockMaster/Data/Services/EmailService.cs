@@ -66,7 +66,7 @@ namespace neoStockMaster.Data.Services
             {
                 MailMessage mailMessage = new MailMessage
                 {
-                    From = new MailAddress(senderEmail),
+                    From = new MailAddress(senderEmail, "StockMaster"),
                     Subject = "Şifre Hatırlatma",
                     Body = $"Merhaba,\n\nUnuttuğunuz şifreniz: {userPassword}\n\nGüvenliğiniz için bu şifreyi kimseyle paylaşmayın.",
                     IsBodyHtml = false
@@ -97,7 +97,7 @@ namespace neoStockMaster.Data.Services
             {
                 MailMessage mailMessage = new MailMessage
                 {
-                    From = new MailAddress(senderEmail),
+                    From = new MailAddress(senderEmail, "StockMaster"),
                     Subject = "Kullanıcı Adı Hatırlatma",
                     Body = $"Merhaba,\n\nKullanıcı adınız: {username}\n\nİyi günler dileriz!",
                     IsBodyHtml = false

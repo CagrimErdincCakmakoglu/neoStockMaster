@@ -68,8 +68,11 @@ namespace neoStockMaster.Forms
 
         private void btnRecovery_Click(object sender, EventArgs e)
         {
-            RecoveryScreen recoveryScreen = new RecoveryScreen();
-            recoveryScreen.Show();
+            string selectedLanguage = cmbLanguage.SelectedItem.ToString(); // Seçili dili al
+
+            RecoveryScreen recoveryScreen = new RecoveryScreen(selectedLanguage);
+            recoveryScreen.LanguageChanged += UpdateLanguageComboBox; // Dil değişikliği event'ini dinle
+            recoveryScreen.ShowDialog();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -107,7 +110,7 @@ namespace neoStockMaster.Forms
                 //UserInformationScreen.LoggedInUser = loggedInUser;
                 //UserService.LoggedInUser = loggedInUser;
                 //ViewOrdersEditingScreen.LoggedInUser = loggedInUser;
-                //OrderService.LoggedInUser = loggedInUser;
+                OrderService.LoggedInUser = loggedInUser;
                 //ZReportForm.LoggedInUser = loggedInUser;
 
                 MainMenu mainMenu = new MainMenu();
@@ -193,6 +196,8 @@ namespace neoStockMaster.Forms
         public void UpdateLanguageComboBox(string language)
         {
             cmbLanguage.SelectedItem = language;
+
+
         }
     }
 }

@@ -24,6 +24,7 @@ namespace neoStockMaster.Data.Entities
             ID = Guid.NewGuid().ToString();
             Name = name;
             Email = email;
+            Password = password;
             RegistrationDate = DateTime.Now;
             Language = language;
         }

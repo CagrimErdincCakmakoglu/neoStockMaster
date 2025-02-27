@@ -16,7 +16,7 @@ namespace neoStockMaster.Forms
     public partial class RegisterScreen : Form
     {
         private string selectedLanguage;
-        private EmailService emailService; // EmailService nesnesi
+        private EmailService emailService;
         private UserService _userService;
         public string enteredUserName = "";
 
@@ -37,7 +37,6 @@ namespace neoStockMaster.Forms
 
             emailService = new EmailService("stockmasterapp@gmail.com", "bfbi cpom gikz azjx");
             _userService = new UserService();
-            //users = new List<User>(); // Kullanıcı listesi başlatılır
         }
 
         private void UpdateLanguage()
@@ -120,12 +119,6 @@ namespace neoStockMaster.Forms
 
                 MessageBox.Show(resultMessage);
 
-
-                //if (resultMessage == "Kayıt başarılı!")
-                //{
-                //    MessageBox.Show($"Onay kodu e-posta adresinize gönderildi. \nLütfen gelen kutunuzu kontrol edin.",
-                //            "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
             }
             catch (FormatException)
             {
