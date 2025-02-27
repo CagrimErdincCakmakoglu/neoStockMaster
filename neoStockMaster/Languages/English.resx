@@ -138,8 +138,14 @@
   <data name="Kayıt Ol" xml:space="preserve">
     <value>Register</value>
   </data>
+  <data name="Kod" xml:space="preserve">
+    <value>Code</value>
+  </data>
   <data name="Kullanıcı Bilgileri" xml:space="preserve">
     <value>User Information</value>
+  </data>
+  <data name="Kullanıcı Onaylama" xml:space="preserve">
+    <value>User Verification</value>
   </data>
   <data name="Kullanıcı İsmi" xml:space="preserve">
     <value>Username</value>
@@ -149,6 +155,9 @@
   </data>
   <data name="Mail" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="Onayla" xml:space="preserve">
+    <value>Confirm</value>
   </data>
   <data name="Temizle" xml:space="preserve">
     <value>Clear</value>

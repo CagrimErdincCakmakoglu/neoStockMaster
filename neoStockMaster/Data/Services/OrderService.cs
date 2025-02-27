@@ -20,7 +20,7 @@ namespace neoStockMaster.Data.Services
 
         }
 
-        // Siparişleri JSON dosyasından yükler
+
         private List<Order> LoadOrders()
         {
             if (!File.Exists(_filePath))
@@ -33,21 +33,21 @@ namespace neoStockMaster.Data.Services
 
         }
 
-        // Siparişleri JSON dosyasına kaydeder
+
         private void SaveOrders()
         {
             var jsonData = System.Text.Json.JsonSerializer.Serialize(_orders, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(_filePath, jsonData);
         }
 
-        // Sipariş ekleme
+
         public void AddOrder(Order order)
         {
             _orders.Add(order);
             SaveOrders();
         }
 
-        // Sipariş silme
+
         public bool DeleteOrder(string orderId)
         {
             var order = _orders.FirstOrDefault(o => o.ID == orderId);
@@ -60,7 +60,7 @@ namespace neoStockMaster.Data.Services
             return false;
         }
 
-        // Sipariş güncelleme
+
         public bool UpdateOrder(Order updatedOrder)
         {
             var order = _orders.FirstOrDefault(o => o.ID == updatedOrder.ID);
@@ -83,13 +83,13 @@ namespace neoStockMaster.Data.Services
             return false;
         }
 
-        // Tüm siparişleri listeleme
+
         public List<Order> GetAllOrders()
         {
             return _orders;
         }
 
-        // Belirli bir siparişi alma
+
         public Order GetOrderById(string orderId)
         {
             var orders = GetAllOrders(); // orders.json'dan tüm siparişleri al

@@ -5,12 +5,15 @@ using System.Net.Mail;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using neoStockMaster.Data.Entities;
+using neoStockMaster.Forms;
 
 namespace neoStockMaster.Data.Services
 {
     public class EmailService
     {
         private readonly OrderService _orderService;
+        private readonly UserService _userService;
         private readonly string smtpClientAddress = "smtp.gmail.com";
         private readonly int smtpPort = 587;
         private readonly string senderEmail = "stockmasterapp@gmail.com";
@@ -27,12 +30,13 @@ namespace neoStockMaster.Data.Services
         {
             try
             {
-                // Mail mesajı oluşturma
                 MailMessage mailMessage = new MailMessage
                 {
-                    From = new MailAddress(senderEmail),
+                    From = new MailAddress(senderEmail, "StockMaster"),
                     Subject = "Hoş Geldiniz!",
-                    Body = $"Merhaba {recipientName},\n\nUygulamaya kayıt olduğunuz için teşekkür ederim! Sizleri aramızda görmekten mutluluk duyuyorum.\n\nEn iyi dileklerimle,\n\n[Stock Master]",
+                    Body = $"Merhaba {recipientName},\n\n" +
+                           $"Uygulamaya kayıt olduğunuz için teşekkür ederiz! Sizleri aramızda görmekten mutluluk duyuyoruz.\n\n" +
+                           $"En iyi dileklerimle,\n\n[Stock Master]",
                     IsBodyHtml = false // HTML içeriği kullanacaksanız true yapın
                 };
                 mailMessage.To.Add(new MailAddress(recipientEmail));
@@ -44,9 +48,9 @@ namespace neoStockMaster.Data.Services
                     EnableSsl = true
                 })
                 {
-                    // Mail gönderme
                     smtpClient.Send(mailMessage);
                 }
+
             }
             catch (Exception ex)
             {

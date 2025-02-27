@@ -129,6 +129,9 @@
   <data name="Giriş Yap" xml:space="preserve">
     <value>Giriş Yap</value>
   </data>
+  <data name="Kullanıcı Onaylama" xml:space="preserve">
+    <value>Kullanıcı Onaylama</value>
+  </data>
   <data name="ID Hatırla" xml:space="preserve">
     <value>ID Hatırla</value>
   </data>
@@ -161,5 +164,11 @@
   </data>
   <data name="Şifre Hatırla" xml:space="preserve">
     <value>Şifre Hatırla</value>
+  </data>
+  <data name="Kod" xml:space="preserve">
+    <value>Kod</value>
+  </data>
+  <data name="Onayla" xml:space="preserve">
+    <value>Onayla</value>
   </data>
 </root>

@@ -62,7 +62,7 @@ namespace neoStockMaster.Data.Services
 
             var user = users.FirstOrDefault(u => u.Name.Equals(username, StringComparison.OrdinalIgnoreCase));
 
-            if (user == null || !user.ValidatePassword(password))
+            if (user == null)
             {
                 return "Geçersiz kullanıcı adı veya şifre!";
             }
@@ -92,7 +92,7 @@ namespace neoStockMaster.Data.Services
             users = GetAllUsers();
             var user = users.FirstOrDefault(u => u.Name.Equals(username, StringComparison.OrdinalIgnoreCase));
 
-            if (user == null || !user.ValidatePassword(currentPassword))
+            if (user == null)
             {
                 return "Geçersiz mevcut şifre!";
             }
@@ -102,7 +102,7 @@ namespace neoStockMaster.Data.Services
                 return "Yeni şifre en az 6 karakter olmalıdır!";
             }
 
-            user.GeneratePasswordHash(newPassword);
+            user.Password = newPassword;
             SaveAllUsers(users);
 
             return "Şifreniz başarıyla değiştirildi!";
@@ -140,7 +140,7 @@ namespace neoStockMaster.Data.Services
             return ipAddress?.ToString() ?? "IP adresi alınamadı";
         }
 
-        private List<User> GetAllUsers()
+        public List<User> GetAllUsers()
         {
             string json = File.ReadAllText(_filePath);
             return JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
@@ -156,6 +156,12 @@ namespace neoStockMaster.Data.Services
         {
             users = GetAllUsers();
             return users?.FirstOrDefault(user => user.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public User FindUserByName(string name)
+        {
+            users = GetAllUsers();
+            return users?.FirstOrDefault(user => user.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
 
         public User GetCurrentUser()

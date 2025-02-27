@@ -133,6 +133,15 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kod.
+        /// </summary>
+        internal static string Kod {
+            get {
+                return ResourceManager.GetString("Kod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kullanıcı Bilgileri.
         /// </summary>
         internal static string Kullanıcı_Bilgileri {
@@ -151,6 +160,15 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kullanıcı Onaylama.
+        /// </summary>
+        internal static string Kullanıcı_Onaylama {
+            get {
+                return ResourceManager.GetString("Kullanıcı Onaylama", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kullanıcı Şifresi.
         /// </summary>
         internal static string Kullanıcı_Şifresi {
@@ -165,6 +183,15 @@ namespace neoStockMaster.Languages {
         internal static string Mail {
             get {
                 return ResourceManager.GetString("Mail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Onayla.
+        /// </summary>
+        internal static string Onayla {
+            get {
+                return ResourceManager.GetString("Onayla", resourceCulture);
             }
         }
         

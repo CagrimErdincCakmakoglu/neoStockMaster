@@ -39,7 +39,15 @@
             lblName = new Label();
             btnClear = new Button();
             btnRegister = new Button();
+            grbVerification = new GroupBox();
+            btnVerificationConfirm = new Button();
+            btnVerificationClear = new Button();
+            txtVerificationCode = new TextBox();
+            txtVerificationName = new TextBox();
+            lblVerificationCode = new Label();
+            lblVerificationName = new Label();
             grbUserInfo.SuspendLayout();
+            grbVerification.SuspendLayout();
             SuspendLayout();
             // 
             // grbUserInfo
@@ -107,6 +115,7 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(248, 23);
             txtUsername.TabIndex = 4;
+            txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // lblLanguage
             // 
@@ -146,11 +155,79 @@
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += btnRegister_Click;
             // 
+            // grbVerification
+            // 
+            grbVerification.Controls.Add(btnVerificationConfirm);
+            grbVerification.Controls.Add(btnVerificationClear);
+            grbVerification.Controls.Add(txtVerificationCode);
+            grbVerification.Controls.Add(txtVerificationName);
+            grbVerification.Controls.Add(lblVerificationCode);
+            grbVerification.Controls.Add(lblVerificationName);
+            grbVerification.Location = new Point(12, 189);
+            grbVerification.Name = "grbVerification";
+            grbVerification.Size = new Size(338, 114);
+            grbVerification.TabIndex = 10;
+            grbVerification.TabStop = false;
+            grbVerification.Text = "Kullanıcı Onaylama";
+            // 
+            // btnVerificationConfirm
+            // 
+            btnVerificationConfirm.Location = new Point(226, 80);
+            btnVerificationConfirm.Name = "btnVerificationConfirm";
+            btnVerificationConfirm.Size = new Size(75, 23);
+            btnVerificationConfirm.TabIndex = 5;
+            btnVerificationConfirm.Text = "Onayla";
+            btnVerificationConfirm.UseVisualStyleBackColor = true;
+            btnVerificationConfirm.Click += btnVerificationConfirm_Click;
+            // 
+            // btnVerificationClear
+            // 
+            btnVerificationClear.Location = new Point(117, 80);
+            btnVerificationClear.Name = "btnVerificationClear";
+            btnVerificationClear.Size = new Size(75, 23);
+            btnVerificationClear.TabIndex = 4;
+            btnVerificationClear.Text = "Temizle";
+            btnVerificationClear.UseVisualStyleBackColor = true;
+            btnVerificationClear.Click += btnVerificationClear_Click;
+            // 
+            // txtVerificationCode
+            // 
+            txtVerificationCode.Location = new Point(76, 51);
+            txtVerificationCode.Name = "txtVerificationCode";
+            txtVerificationCode.Size = new Size(248, 23);
+            txtVerificationCode.TabIndex = 3;
+            // 
+            // txtVerificationName
+            // 
+            txtVerificationName.Location = new Point(76, 22);
+            txtVerificationName.Name = "txtVerificationName";
+            txtVerificationName.Size = new Size(248, 23);
+            txtVerificationName.TabIndex = 2;
+            // 
+            // lblVerificationCode
+            // 
+            lblVerificationCode.AutoSize = true;
+            lblVerificationCode.Location = new Point(16, 54);
+            lblVerificationCode.Name = "lblVerificationCode";
+            lblVerificationCode.Size = new Size(28, 15);
+            lblVerificationCode.TabIndex = 1;
+            lblVerificationCode.Text = "Kod";
+            // 
+            // lblVerificationName
+            // 
+            lblVerificationName.AutoSize = true;
+            lblVerificationName.Location = new Point(16, 25);
+            lblVerificationName.Name = "lblVerificationName";
+            lblVerificationName.Size = new Size(29, 15);
+            lblVerificationName.TabIndex = 0;
+            lblVerificationName.Text = "İsim";
+            // 
             // RegisterScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(360, 191);
+            ClientSize = new Size(360, 312);
+            Controls.Add(grbVerification);
             Controls.Add(btnRegister);
             Controls.Add(btnClear);
             Controls.Add(grbUserInfo);
@@ -158,8 +235,11 @@
             MaximizeBox = false;
             Name = "RegisterScreen";
             Text = "Kayıt Ekranı";
+            Load += RegisterScreen_Load;
             grbUserInfo.ResumeLayout(false);
             grbUserInfo.PerformLayout();
+            grbVerification.ResumeLayout(false);
+            grbVerification.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -176,5 +256,12 @@
         private Label lblName;
         private Button btnClear;
         private Button btnRegister;
+        private GroupBox grbVerification;
+        private Button btnVerificationConfirm;
+        private Button btnVerificationClear;
+        private TextBox txtVerificationCode;
+        private TextBox txtVerificationName;
+        private Label lblVerificationCode;
+        private Label lblVerificationName;
     }
 }

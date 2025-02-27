@@ -9,13 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace neoStockMaster.Forms
 {
     public partial class RegisterScreen : Form
     {
         private string selectedLanguage;
+        private EmailService emailService; // EmailService nesnesi
         private UserService _userService;
+        public string enteredUserName = "";
 
         public RegisterScreen(string selectedLanguage)
         {
@@ -26,17 +29,15 @@ namespace neoStockMaster.Forms
             cmbLanguage.Items.Add("Türkçe");
             cmbLanguage.Items.Add("English");
 
-            if (selectedLanguage == "Türkçe")
-            {
-                cmbLanguage.SelectedIndex = 0;
-            }
-            else if (selectedLanguage == "English")
-            {
-                cmbLanguage.SelectedIndex = 1;
-            }
+            cmbLanguage.SelectedIndex = selectedLanguage == "Türkçe" ? 0 : 1;
+
 
             LanguageService.LanguageChanged += UpdateLanguage;
             UpdateLanguage();
+
+            emailService = new EmailService("stockmasterapp@gmail.com", "bfbi cpom gikz azjx");
+            _userService = new UserService();
+            //users = new List<User>(); // Kullanıcı listesi başlatılır
         }
 
         private void UpdateLanguage()
@@ -48,6 +49,11 @@ namespace neoStockMaster.Forms
             btnClear.Text = LanguageService.GetString("Temizle");
             btnRegister.Text = LanguageService.GetString("Kayıt Ol");
             grbUserInfo.Text = LanguageService.GetString("Kullanıcı Bilgileri");
+            grbVerification.Text = LanguageService.GetString("Kullanıcı Onaylama");
+            lblVerificationCode.Text = LanguageService.GetString("Kod");
+            btnVerificationClear.Text = LanguageService.GetString("Temizle");
+            btnVerificationConfirm.Text = LanguageService.GetString("Onayla");
+            lblVerificationName.Text = LanguageService.GetString("İsim");
 
             this.Text = LanguageService.GetString("Kayıt Ekranı");
         }
@@ -115,16 +121,37 @@ namespace neoStockMaster.Forms
                 MessageBox.Show(resultMessage);
 
 
-                if (resultMessage == "Kayıt başarılı!")
-                {
-                    this.Close();
-                }
+                //if (resultMessage == "Kayıt başarılı!")
+                //{
+                //    MessageBox.Show($"Onay kodu e-posta adresinize gönderildi. \nLütfen gelen kutunuzu kontrol edin.",
+                //            "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
             }
             catch (FormatException)
             {
                 MessageBox.Show("Geçersiz mail adresi formatı. Lütfen doğru bir mail adresi giriniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            txtVerificationName.Text = txtUsername.Text;
+        }
+
+        private void RegisterScreen_Load(object sender, EventArgs e)
+        {
+            txtVerificationName.Enabled = false;
+        }
+
+        private void btnVerificationClear_Click(object sender, EventArgs e)
+        {
+            txtVerificationCode.Clear();
+        }
+
+        private void btnVerificationConfirm_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
