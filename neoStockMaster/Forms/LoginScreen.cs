@@ -87,7 +87,6 @@ namespace neoStockMaster.Forms
                 return;
             }
 
-            // UserService instance oluşturulması
             UserService userService = new UserService();
             bool rememberUsername = chkRememberID.Checked;
             bool rememberPassword = chkRememberPassword.Checked;
@@ -101,7 +100,7 @@ namespace neoStockMaster.Forms
                 MessageBox.Show(loginResult, "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 User loggedInUser = userService.GetCurrentUser();
-                //MainMenu.LoggedInUser = loggedInUser;
+                MainMenu.LoggedInUser = loggedInUser;
                 //ProductManagementScreen.LoggedInUser = loggedInUser;
                 //AddProductScreen.LoggedInUser = loggedInUser;
                 //ProductEditingScreen.LoggedInUser = loggedInUser;

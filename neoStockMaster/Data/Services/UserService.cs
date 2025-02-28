@@ -62,7 +62,7 @@ namespace neoStockMaster.Data.Services
 
             var user = users.FirstOrDefault(u => u.Name.Equals(username, StringComparison.OrdinalIgnoreCase));
 
-            if (user == null)
+            if (user == null || user.Password != password)
             {
                 return "Geçersiz kullanıcı adı veya şifre!";
             }

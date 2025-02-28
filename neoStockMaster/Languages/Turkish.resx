@@ -183,4 +183,31 @@
   <data name="Şifremi Hatırlat" xml:space="preserve">
     <value>Şifremi Hatırlat</value>
   </data>
+  <data name="Uygulamayı Üstte Tut" xml:space="preserve">
+    <value>Uygulamayı Üstte Tut</value>
+  </data>
+  <data name="Ürün İşlemleri" xml:space="preserve">
+    <value>Ürün İşlemleri</value>
+  </data>
+  <data name="Fiyat Hesapla - Sipariş Ekle" xml:space="preserve">
+    <value>Fiyat Hesapla - Sipariş Ekle</value>
+  </data>
+  <data name="Siparişleri Görüntüle - Düzenle" xml:space="preserve">
+    <value>Siparişleri Görüntüle - Düzenle</value>
+  </data>
+  <data name="Z Raporu" xml:space="preserve">
+    <value>Z Raporu</value>
+  </data>
+  <data name="Çıkış Yap" xml:space="preserve">
+    <value>Çıkış Yap</value>
+  </data>
+  <data name="Türkçe" xml:space="preserve">
+    <value>Türkçe</value>
+  </data>
+  <data name="English2" xml:space="preserve">
+    <value>İngilizce</value>
+  </data>
+  <data name="Ana Menü" xml:space="preserve">
+    <value>Ana Menü</value>
+  </data>
 </root>

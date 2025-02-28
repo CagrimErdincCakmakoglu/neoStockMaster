@@ -61,11 +61,29 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ana Menü.
+        /// </summary>
+        internal static string Ana_Menü {
+            get {
+                return ResourceManager.GetString("Ana Menü", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bilgilerimi Hatırlat.
         /// </summary>
         internal static string Bilgilerimi_Hatırlat {
             get {
                 return ResourceManager.GetString("Bilgilerimi Hatırlat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Çıkış Yap.
+        /// </summary>
+        internal static string Çıkış_Yap {
+            get {
+                return ResourceManager.GetString("Çıkış Yap", resourceCulture);
             }
         }
         
@@ -84,6 +102,24 @@ namespace neoStockMaster.Languages {
         internal static string E_Mail_Adresinizi_Yazınız {
             get {
                 return ResourceManager.GetString("E-Mail Adresinizi Yazınız", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to İngilizce.
+        /// </summary>
+        internal static string English2 {
+            get {
+                return ResourceManager.GetString("English2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fiyat Hesapla - Sipariş Ekle.
+        /// </summary>
+        internal static string Fiyat_Hesapla___Sipariş_Ekle {
+            get {
+                return ResourceManager.GetString("Fiyat Hesapla - Sipariş Ekle", resourceCulture);
             }
         }
         
@@ -250,11 +286,56 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Siparişleri Görüntüle - Düzenle.
+        /// </summary>
+        internal static string Siparişleri_Görüntüle___Düzenle {
+            get {
+                return ResourceManager.GetString("Siparişleri Görüntüle - Düzenle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Temizle.
         /// </summary>
         internal static string Temizle {
             get {
                 return ResourceManager.GetString("Temizle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Türkçe.
+        /// </summary>
+        internal static string Türkçe {
+            get {
+                return ResourceManager.GetString("Türkçe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ürün İşlemleri.
+        /// </summary>
+        internal static string Ürün_İşlemleri {
+            get {
+                return ResourceManager.GetString("Ürün İşlemleri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uygulamayı Üstte Tut.
+        /// </summary>
+        internal static string Uygulamayı_Üstte_Tut {
+            get {
+                return ResourceManager.GetString("Uygulamayı Üstte Tut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Z Raporu.
+        /// </summary>
+        internal static string Z_Raporu {
+            get {
+                return ResourceManager.GetString("Z Raporu", resourceCulture);
             }
         }
     }
