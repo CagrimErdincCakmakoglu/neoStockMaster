@@ -119,6 +119,7 @@
             btnProductManagement.TabIndex = 0;
             btnProductManagement.Text = "Ürün İşlemleri";
             btnProductManagement.UseVisualStyleBackColor = true;
+            btnProductManagement.Click += btnProductManagement_Click;
             // 
             // grbUserPanel
             // 
@@ -141,6 +142,7 @@
             chbTop.TabIndex = 6;
             chbTop.Text = "Uygulamayı Üstte Tut";
             chbTop.UseVisualStyleBackColor = true;
+            chbTop.CheckedChanged += chbTop_CheckedChanged;
             // 
             // btnLogOut
             // 

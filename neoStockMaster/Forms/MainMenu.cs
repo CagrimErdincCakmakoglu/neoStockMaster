@@ -34,6 +34,7 @@ namespace neoStockMaster.Forms
         private void LanguageService_LanguageChanged()
         {
             UpdateFormTexts();
+            UpdateSelectedLanguage(); // Seçili dili güncelle
         }
 
         private void UpdateFormTexts()
@@ -54,25 +55,103 @@ namespace neoStockMaster.Forms
             this.Text = LanguageService.GetString("Ana Menü");
         }
 
-
-
         private void MainMenu_Load(object sender, EventArgs e)
         {
+            SetSelectedLanguageUI();
+            UpdateSelectedLanguage(); // İlk açılışta seçili dili uygula
+        }
+
+        private void SetSelectedLanguageUI()
+        {
             string userLanguage = LoggedInUser.Language; // Kullanıcının dil bilgisi
+
+            // Seçili dili arayüze uygula
+            LanguageService.SetLanguage(userLanguage);
+
+            // Buton arka planlarını güncelle
+            if (userLanguage == "Türkçe")
+            {
+                türkçeToolStripMenuItem.BackColor = Color.LightBlue;
+                englishToolStripMenuItem.BackColor = SystemColors.Control;
+            }
+            else if (userLanguage == "English")
+            {
+                englishToolStripMenuItem.BackColor = Color.LightBlue;
+                türkçeToolStripMenuItem.BackColor = SystemColors.Control;
+            }
+
+            // Form üzerindeki yazıları güncelle
+            UpdateFormTexts();
+        }
+
+        private void UpdateSelectedLanguage()
+        {
+            string currentLanguage = LanguageService.CurrentLanguage;
+
+            türkçeToolStripMenuItem.Checked = currentLanguage == "Türkçe";
+            englishToolStripMenuItem.Checked = currentLanguage == "English";
+
+            türkçeToolStripMenuItem.BackColor = türkçeToolStripMenuItem.Checked ? Color.LightBlue : SystemColors.Control;
+            englishToolStripMenuItem.BackColor = englishToolStripMenuItem.Checked ? Color.LightBlue : SystemColors.Control;
         }
 
         private void türkçeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LanguageService.SetLanguage("Türkçe");
-            türkçeToolStripMenuItem.BackColor = Color.LightBlue;
-            englishToolStripMenuItem.BackColor = SystemColors.Control;
+            UpdateSelectedLanguage();
         }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LanguageService.SetLanguage("English");
-            englishToolStripMenuItem.BackColor = Color.LightBlue;
-            türkçeToolStripMenuItem.BackColor = SystemColors.Control;
+            UpdateSelectedLanguage();
+        }
+
+
+        // UYGULAMAYI ÜSTTE TUTMAYA BAŞLANGICI
+        private void ToggleAlwaysOnTop()
+        {
+            bool alwaysOnTop = chbTop.Checked;
+
+            this.TopMost = alwaysOnTop; // MainMenu her zaman önde kalsın
+
+            // Açık olan tüm formları kontrol et ve TopMost ayarlarını yap
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm != this) // MainMenu harici formlar
+                {
+                    openForm.TopMost = alwaysOnTop;
+                }
+            }
+        }
+
+        private void chbTop_CheckedChanged(object sender, EventArgs e)
+        {
+            ToggleAlwaysOnTop();
+        }
+        // UYGULAMAYI ÜSTTE TUTMAYA BİTİŞİ
+
+        private void OpenProductManagementScreen()
+        {
+            string currentLanguage = LanguageService.CurrentLanguage; // Mevcut dili al
+
+            ProductManagementScreen productManagementScreen = new ProductManagementScreen(currentLanguage);
+            productManagementScreen.Owner = this; // MainMenu'yu sahip olarak ayarla (diğer formlar MainMenu'nun önüne geçebilir)
+
+            productManagementScreen.TopMost = chbTop.Checked; // Yeni form da her zaman en önde olsun
+
+            productManagementScreen.FormClosed += (s, e) =>
+            {
+                // Eğer chbTop seçiliyse, tüm formlar en önde kalmaya devam etsin
+                ToggleAlwaysOnTop();
+            };
+
+            productManagementScreen.ShowDialog();
+        }
+
+        private void btnProductManagement_Click(object sender, EventArgs e)
+        {
+            OpenProductManagementScreen();
         }
     }
 }

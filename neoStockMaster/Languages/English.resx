@@ -210,4 +210,26 @@
   <data name="Ana Menü" xml:space="preserve">
     <value>Main Menu</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cropped-tc-bayrak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cropped-tc-bayrak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cii" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cii.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ürün Ekle" xml:space="preserve">
+    <value>Add Product</value>
+  </data>
+  <data name="Ürün Düzenle" xml:space="preserve">
+    <value>Edit Product</value>
+  </data>
+  <data name="Excel'e Aktar" xml:space="preserve">
+    <value>Export to Excel</value>
+  </data>
+  <data name="Sıralama" xml:space="preserve">
+    <value>Sorting</value>
+  </data>
+  <data name="Ürünler" xml:space="preserve">
+    <value>Products</value>
+  </data>
 </root>

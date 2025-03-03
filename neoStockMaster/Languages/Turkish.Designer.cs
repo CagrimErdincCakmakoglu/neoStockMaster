@@ -115,6 +115,15 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Excel&apos;e Aktar.
+        /// </summary>
+        internal static string Excel_e_Aktar {
+            get {
+                return ResourceManager.GetString("Excel\'e Aktar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fiyat Hesapla - Sipariş Ekle.
         /// </summary>
         internal static string Fiyat_Hesapla___Sipariş_Ekle {
@@ -295,6 +304,15 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sıralama.
+        /// </summary>
+        internal static string Sıralama {
+            get {
+                return ResourceManager.GetString("Sıralama", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Temizle.
         /// </summary>
         internal static string Temizle {
@@ -313,11 +331,38 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ürün Düzenle.
+        /// </summary>
+        internal static string Ürün_Düzenle {
+            get {
+                return ResourceManager.GetString("Ürün Düzenle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ürün Ekle.
+        /// </summary>
+        internal static string Ürün_Ekle {
+            get {
+                return ResourceManager.GetString("Ürün Ekle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ürün İşlemleri.
         /// </summary>
         internal static string Ürün_İşlemleri {
             get {
                 return ResourceManager.GetString("Ürün İşlemleri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ürünler.
+        /// </summary>
+        internal static string Ürünler {
+            get {
+                return ResourceManager.GetString("Ürünler", resourceCulture);
             }
         }
         

@@ -20,6 +20,8 @@ namespace neoStockMaster.Forms
         {
             InitializeComponent();
 
+            this.KeyPreview = true;
+
             cmbLanguage.Items.Add("Türkçe");
             cmbLanguage.Items.Add("English");
             cmbLanguage.SelectedIndex = 0;
@@ -101,7 +103,7 @@ namespace neoStockMaster.Forms
 
                 User loggedInUser = userService.GetCurrentUser();
                 MainMenu.LoggedInUser = loggedInUser;
-                //ProductManagementScreen.LoggedInUser = loggedInUser;
+                ProductManagementScreen.LoggedInUser = loggedInUser;
                 //AddProductScreen.LoggedInUser = loggedInUser;
                 //ProductEditingScreen.LoggedInUser = loggedInUser;
                 //ProductService.LoggedInUser = loggedInUser;
@@ -184,6 +186,7 @@ namespace neoStockMaster.Forms
             if (e.KeyCode == Keys.Enter)
             {
                 btnLogin.PerformClick();
+                
             }
         }
 

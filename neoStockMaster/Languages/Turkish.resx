@@ -210,4 +210,19 @@
   <data name="Ana Menü" xml:space="preserve">
     <value>Ana Menü</value>
   </data>
+  <data name="Ürün Ekle" xml:space="preserve">
+    <value>Ürün Ekle</value>
+  </data>
+  <data name="Ürün Düzenle" xml:space="preserve">
+    <value>Ürün Düzenle</value>
+  </data>
+  <data name="Excel'e Aktar" xml:space="preserve">
+    <value>Excel'e Aktar</value>
+  </data>
+  <data name="Sıralama" xml:space="preserve">
+    <value>Sıralama</value>
+  </data>
+  <data name="Ürünler" xml:space="preserve">
+    <value>Ürünler</value>
+  </data>
 </root>

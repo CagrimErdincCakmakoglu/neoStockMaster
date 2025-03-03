@@ -79,11 +79,31 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cii {
+            get {
+                object obj = ResourceManager.GetObject("cii", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log Out.
         /// </summary>
         internal static string Çıkış_Yap {
             get {
                 return ResourceManager.GetString("Çıkış Yap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cropped_tc_bayrak {
+            get {
+                object obj = ResourceManager.GetObject("cropped-tc-bayrak", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -111,6 +131,15 @@ namespace neoStockMaster.Languages {
         internal static string English2 {
             get {
                 return ResourceManager.GetString("English2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export to Excel.
+        /// </summary>
+        internal static string Excel_e_Aktar {
+            get {
+                return ResourceManager.GetString("Excel\'e Aktar", resourceCulture);
             }
         }
         
@@ -295,6 +324,15 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorting.
+        /// </summary>
+        internal static string Sıralama {
+            get {
+                return ResourceManager.GetString("Sıralama", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clear.
         /// </summary>
         internal static string Temizle {
@@ -313,11 +351,38 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit Product.
+        /// </summary>
+        internal static string Ürün_Düzenle {
+            get {
+                return ResourceManager.GetString("Ürün Düzenle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Product.
+        /// </summary>
+        internal static string Ürün_Ekle {
+            get {
+                return ResourceManager.GetString("Ürün Ekle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Product Operations.
         /// </summary>
         internal static string Ürün_İşlemleri {
             get {
                 return ResourceManager.GetString("Ürün İşlemleri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Products.
+        /// </summary>
+        internal static string Ürünler {
+            get {
+                return ResourceManager.GetString("Ürünler", resourceCulture);
             }
         }
         
