@@ -104,7 +104,7 @@ namespace neoStockMaster.Forms
                 User loggedInUser = userService.GetCurrentUser();
                 MainMenu.LoggedInUser = loggedInUser;
                 ProductManagementScreen.LoggedInUser = loggedInUser;
-                //AddProductScreen.LoggedInUser = loggedInUser;
+                AddProductScreen.LoggedInUser = loggedInUser;
                 //ProductEditingScreen.LoggedInUser = loggedInUser;
                 //ProductService.LoggedInUser = loggedInUser;
                 //CalculatePriceAddOrderScreen.LoggedInUser = loggedInUser;

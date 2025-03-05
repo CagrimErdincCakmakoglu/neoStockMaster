@@ -117,11 +117,38 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dollar.
+        /// </summary>
+        internal static string Dolar {
+            get {
+                return ResourceManager.GetString("Dolar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exchange Rate Information.
+        /// </summary>
+        internal static string Döviz_Bilgisi {
+            get {
+                return ResourceManager.GetString("Döviz Bilgisi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter Your Email Address.
         /// </summary>
         internal static string E_Mail_Adresinizi_Yazınız {
             get {
                 return ResourceManager.GetString("E-Mail Adresinizi Yazınız", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        internal static string Ekle {
+            get {
+                return ResourceManager.GetString("Ekle", resourceCulture);
             }
         }
         
@@ -135,11 +162,29 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Euro.
+        /// </summary>
+        internal static string Euro {
+            get {
+                return ResourceManager.GetString("Euro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Export to Excel.
         /// </summary>
         internal static string Excel_e_Aktar {
             get {
                 return ResourceManager.GetString("Excel\'e Aktar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        internal static string Fiyat {
+            get {
+                return ResourceManager.GetString("Fiyat", resourceCulture);
             }
         }
         
@@ -194,6 +239,15 @@ namespace neoStockMaster.Languages {
         internal static string İşlemi_Seç {
             get {
                 return ResourceManager.GetString("İşlemi Seç", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profit Margin.
+        /// </summary>
+        internal static string Kâr_Yüzdesi {
+            get {
+                return ResourceManager.GetString("Kâr Yüzdesi", resourceCulture);
             }
         }
         
@@ -279,6 +333,15 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cost.
+        /// </summary>
+        internal static string Maliyet {
+            get {
+                return ResourceManager.GetString("Maliyet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Confirm.
         /// </summary>
         internal static string Onayla {
@@ -333,6 +396,15 @@ namespace neoStockMaster.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Stock.
+        /// </summary>
+        internal static string Stok {
+            get {
+                return ResourceManager.GetString("Stok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clear.
         /// </summary>
         internal static string Temizle {
@@ -347,6 +419,15 @@ namespace neoStockMaster.Languages {
         internal static string Türkçe {
             get {
                 return ResourceManager.GetString("Türkçe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Information.
+        /// </summary>
+        internal static string Ürün_Bilgileri {
+            get {
+                return ResourceManager.GetString("Ürün Bilgileri", resourceCulture);
             }
         }
         

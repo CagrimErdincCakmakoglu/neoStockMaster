@@ -110,6 +110,7 @@
             btnAddProduct.TabIndex = 0;
             btnAddProduct.Text = "Ürün Ekle";
             btnAddProduct.UseVisualStyleBackColor = true;
+            btnAddProduct.Click += btnAddProduct_Click;
             // 
             // btnEditProduct
             // 

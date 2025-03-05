@@ -232,4 +232,31 @@
   <data name="Ürünler" xml:space="preserve">
     <value>Products</value>
   </data>
+  <data name="Ürün Bilgileri" xml:space="preserve">
+    <value>Product Information</value>
+  </data>
+  <data name="Maliyet" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="Stok" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="Kâr Yüzdesi" xml:space="preserve">
+    <value>Profit Margin</value>
+  </data>
+  <data name="Fiyat" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Döviz Bilgisi" xml:space="preserve">
+    <value>Exchange Rate Information</value>
+  </data>
+  <data name="Dolar" xml:space="preserve">
+    <value>Dollar</value>
+  </data>
+  <data name="Euro" xml:space="preserve">
+    <value>Euro</value>
+  </data>
+  <data name="Ekle" xml:space="preserve">
+    <value>Add</value>
+  </data>
 </root>

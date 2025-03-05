@@ -46,6 +46,8 @@ namespace neoStockMaster.Forms
 
 
             this.Text = LanguageService.GetString("Ürün İşlemleri");
+
+            AdjustLabelPosition();
             UpdateSelectedLanguage();
         }
 
@@ -91,5 +93,22 @@ namespace neoStockMaster.Forms
             cmbOrdery.SelectedIndex = 0;
         }
 
+        private void AdjustLabelPosition()
+        {
+            if (LanguageService.CurrentLanguage == "English")
+            {
+                lblActivity.Left = 130; // İngilizce için belirlediğin konum
+            }
+            else
+            {
+                lblActivity.Left = 155; // 2Türkçe için belirlediğin konum
+            }
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            AddProductScreen addProductScreen = new AddProductScreen();
+            addProductScreen.ShowDialog();
+        }
     }
 }
